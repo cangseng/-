@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>京东注册</title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/jdzhuce.css"/>
+		<script src="../../Ajax.js"></script>
+		<script src="../../js/tool.js"></script>
+		<script src="../js/jdzhuce.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<div class="inner cont">
+				<div class="logo clearfix">
+					<h1><a href="https://www.jd.com/" title="京东官网">京东</a></h1>
+					<p>欢迎注册</p>
+				</div>
+				<div class="tiaozhuan">
+					<p>已有账号? <a href="jddenglu.html">请登录&gt;</a></p>
+				</div>
+			</div>
+		</div>
+		<div id="biaodan">
+			<div class="inner_2 cont">
+				<form action="../js/signUp.php" method="POST" id="formo">
+					账&nbsp;&nbsp;号 : <input type="text" name="" id="user" placeholder="请输入账号" /><i id="userI"></i><span id="userspan">只能包含文字数字字母3-10</span><br />
+					密&nbsp;&nbsp;码 : <input type="password" name="" id="pwd" value="" /><i id="pwdI"></i><span id="pwdspan">只能包含数字字母下滑线6-12</span><br />
+					密码确认 : <input type="password" name="" id="pwds" value="" /><i id="pwdsI"></i><span id="pwdsspan">需要与上面密码一致</span><br />
+					电话号码 : <input type="text" name="" id="ph" placeholder="选填" /><i id="phI"></i><span id="phspan">建议常用号码</span><br />
+					<input type="button" name="" id="btn" value="立即注册" />
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

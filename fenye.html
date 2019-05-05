@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>分页</title>
+		<script src="../../Ajax.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body,html{
+				width: 100%;
+				height: 100%;
+			}
+			#fenye{
+				width: 500px;
+				height: 50px;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				/*border: #ccc solid 1px;*/
+				margin: 0 auto;
+			}
+			button{
+				width: 60px;
+				height: 30px;
+				border: #ccc solid 1px;
+				line-height: 30px;
+				text-align: center;
+				cursor: pointer;
+			}
+			span{
+				width: 20px;
+				height: 20px;
+				border: #ccc solid 1px;
+				line-height: 20px;
+				text-align: center;
+			}
+			#_content{
+				height: 500px;
+				text-align: center;
+			}
+			img{
+				width: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="_content">
+			<!--<img src="../../demo3/images/1.jpg" />
+			<img src="../../demo3/images/2.jpg" />
+			<img src="../../demo3/images/3.jpg" />
+			<img src="../../demo3/images/4.jpg" />
+			<img src="../../demo3/images/5.jpg" />-->
+		</div>
+		<div id="fenye">
+			<button id="_left">上一页</button>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<button id="_right">下一页</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		let fenye = document.getElementById("fenye");
+		let txt = fenye.children[1].innerText;
+		let _left = document.getElementById("_left");
+		let _right = document.getElementById("_right");
+		let _span = document.querySelectorAll("span");
+		let _content = document.getElementById("_content");
+		let _cont = document.getElementById("_content").children;
+		
+		let brr ;
+		let flag = document.createDocumentFragment();
+		
+		_left.onclick = function(){
+			if (txt !== "1") {
+				
+			} else{
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+//			if (txt === "1") {
+//				_ajax.request({
+//					url:"../js/fenye.json",
+//					data:null,
+//					success:function(data){
+//						data = window.eval("("+data+")");
+//						brr = data.arr;
+////						console.log( brr)
+//						for(let i = 0;i < _span.length; i++){
+//							
+//							brr[i]
+//						}
+//					}
+//				})
+//			}else{
+//				alert("这是第一页了")
+//			}
+		}
+		let index = 0;
+		let img;
+		_right.onclick = function(){
+			_content.innerHTML = "";
+			if (txt !== "50") {
+				if (index === 70) {
+					index = 0;
+				}
+				for (var i = 0; i < _span.length; i++) {
+					index++;
+					img = document.createElement("img");
+					img.src = `../../demo3/images/${index}.jpg`;
+					flag.appendChild(img);
+					console.log(flag)
+				}
+				_content.appendChild(flag);
+			}else{
+				alert("这是最后一页了")
+			}
+		}
+//		for (var i = 1; i <= 50; i++) {
+//			document.write(i + ",")
+//		}
+	</script>
+</html>
